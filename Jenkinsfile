@@ -6,6 +6,8 @@ pipeline {
             steps {
                 echo 'Building..'
                 echo 'my parameter for git repo url is: ${repo_url}'
+                echo 'my parameter for git repo url is: env.repo_url'
+                echo env.repo_url
             }
         }
         stage('Test') {
