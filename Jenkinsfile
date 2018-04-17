@@ -15,8 +15,7 @@ pipeline {
                     //'aafadd97-6037-457e-9ea5-3f20b7c61e02', 
                     //url: env.repo_url]]])
                 
-                sh "echo $repo_url"
-                sh "git checkout $repo_url"
+                ["git", "clone", repo_url, "C:/Program Files (x86)/Jenkins/workspace/DemoPipeline/"].execute()
             }
         }
         stage('Test') {
