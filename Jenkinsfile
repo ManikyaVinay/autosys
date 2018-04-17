@@ -7,6 +7,8 @@ pipeline {
                 echo 'Building..'
                 echo 'my parameter for git repo url is: ${repo_url}'
                 echo 'my parameter for git repo url is: env.repo_url'
+                echo 'repo_url: ${env.repo_url}'
+                echo 'repo_url1: ${params.repo_url}'
                 echo env.repo_url
                 checkout([$class: 'GitSCM', branches: [[name: '*/master']],
                     doGenerateSubmoduleConfigurations: false, 
