@@ -5,7 +5,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                echo repo_url, GITT_URL
+                echo GIT_URL
+                echo repo_url
                 echo params.repo_url
                 echo env.repo_url
                 checkout([$class: 'GitSCM', branches: [[name: '*/master']],
