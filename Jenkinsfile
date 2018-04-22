@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                echo 'Building..!!'
                 echo GIT_URL
                 echo repo_url
                 echo params.repo_url
